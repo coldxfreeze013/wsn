@@ -1,0 +1,17 @@
+1. Describe the concept of Events, Commands and Tasks in TinyOS 
+
+TinyOS is a lightweight operating system designed for wireless sensor networks and embedded systems. It follows an event-driven architecture that allows efficient operation on devices with limited memory, power, and processing capability. The three main computational concepts in TinyOS are events, commands, and tasks. 
+Events are asynchronous signals that occur when a specific action or interrupt happens in the system. They are usually triggered by hardware or software components, such as the completion of a timer or the arrival of a data packet. Events are handled immediately through event handlers, allowing the system to respond quickly to external changes. Because events must execute rapidly, they usually contain short and simple code. 
+Commands are synchronous requests made by one component to another to perform a particular operation. They are generally initiated by higher-level components to control hardware or perform system functions. Commands may return a result or status indicating whether the operation was successful or not. In many cases, a command execution may lead to the generation of an event. 
+Tasks are operations that are scheduled to run later by the TinyOS scheduler. Unlike events, tasks are not executed immediately. Instead, they are placed in a task queue and executed sequentially. Tasks are used for operations that require more processing time but do not require instant response. They help ensure efficient resource management and cooperative multitasking in TinyOS. 
+Thus, events, commands, and tasks work together to enable efficient and reliable operation of wireless sensor network applications. 
+
+ 
+
+2. Write on nesC model and nesC components 
+The nesC model is a programming approach used in TinyOS to develop applications for wireless sensor networks. nesC is a C-based programming language specifically designed for embedded systems and sensor network applications. It follows a component-based architecture that allows programs to be structured in modular and efficient ways. This model helps developers manage limited resources such as memory, processing power, and energy. 
+One of the main features of the nesC model is its support for concurrency through events, commands, and tasks. It allows components to communicate through well-defined interfaces. Another important feature is static resource allocation, which reduces runtime overhead by allocating memory and resources during compilation. The nesC compiler also helps detect race conditions during compilation, improving program reliability. 
+In nesC, applications are built using components. There are two main types of components: modules and configurations. Modules contain the application logic and implement commands, events, and tasks. They perform the main operations of the program. Configurations are used to connect or “wire” different modules together by linking their interfaces. 
+Components communicate using interfaces that define the commands and events they provide or use. This structured design makes the system easier to develop, maintain, and reuse. By using the nesC model and its component-based structure, developers can create efficient and scalable applications for wireless sensor networks. 
+
+ 
